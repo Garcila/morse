@@ -83,7 +83,7 @@ function App() {
   const encodeEnglish = messageArr => {
     setDecoded('');
     messageArr.map((i, ind) => {
-      i = engToMorseCode[i[ind]] || '🐝';
+      i = engToMorseCode[i[ind]] || '🚑';
       setDecoded(decoded => `${decoded}${i}  |  `);
     });
   };
