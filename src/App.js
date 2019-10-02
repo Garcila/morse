@@ -80,11 +80,12 @@ function App() {
     setMessageArr([...messageArr, e.target.value]);
   };
 
-  const encodeEnglish = messageArr => {
+  const encodeEnglish = typed => {
     setDecoded('');
-    messageArr.map((i, ind) => {
-      i = engToMorseCode[i[ind]] || '🚑';
-      setDecoded(decoded => `${decoded}${i}  |  `);
+    typed.map(i => {
+      // setMessageString(`${messageString}${i}`);
+      i = engToMorseCode[i] || '👻';
+      setDecoded(decoded => `${decoded}${i} | `);
     });
   };
 
@@ -98,7 +99,8 @@ function App() {
     setMessageArr([]);
   };
 
-  const clearQuery = () => {
+  const clearQuery = (typed, setTyped) => {
+    setTyped('');
     setMessageArr([]);
     setDecoded('');
     setMessageString('');
@@ -119,6 +121,7 @@ function App() {
         />
       ) : (
         <EnglishToMorse
+          messageString={messageString}
           typeEnglish={typeEnglish}
           messageArr={messageArr}
           decoded={decoded}

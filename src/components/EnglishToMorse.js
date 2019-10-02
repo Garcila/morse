@@ -1,26 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 export default function MorseToEnglish(props) {
-  const {
-    messageArr,
-    clearQuery,
-    decode,
-    decoded,
-    typeEnglish,
-    encodeEnglish,
-  } = props;
+  const [typed, setTyped] = useState('');
+  const {clearQuery, decoded, encodeEnglish} = props;
+
+  const handleClicked = () => {
+    encodeEnglish([...typed]);
+  };
   return (
     <div>
-      <input type='text' id='englishInput' onChange={typeEnglish} />
+      <input
+        type='text'
+        id='englishInput'
+        value={typed}
+        onChange={e => setTyped(e.target.value)}
+      />
       <span>
-        <button id='decode' onClick={() => encodeEnglish(messageArr)}>
+        <button id='decode' onClick={handleClicked}>
           decode
         </button>
-        <button id='clearQuery' onClick={clearQuery}>
+        <button id='clearQuery' onClick={() => clearQuery(typed, setTyped)}>
           Clear
         </button>
       </span>
-      <div id='roman'>{decoded}</div>
+      <div id='roman'>
+        <span className='englishToMorseRomanSpan'>{typed}:</span>
+        {decoded}
+      </div>
     </div>
   );
 }

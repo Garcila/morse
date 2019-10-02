@@ -39,6 +39,10 @@
   margin: 0 2rem;
 }
 
+.englishToMorseRomanSpan {
+  margin-right: 1rem;
+}
+
 #morse {
   display: flex;
   justify-content: center;
@@ -59,4 +63,6 @@
   background-color: coral;
   min-height: 10vh;
   border-radius: 0.5rem;
+  font-size: 1.3rem;
+  color: white;
 }
