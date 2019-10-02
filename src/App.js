@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Switch from 'react-switch';
 
 import './App.css';
 
@@ -9,6 +8,7 @@ import Header from './components/Header';
 import Select from './components/Select';
 import MorseToEnglish from './components/MorseToEnglish';
 import EnglishToMorse from './components/EnglishToMorse';
+import MorseCode from './components/MorseCode';
 
 function App() {
   const [messageArr, setMessageArr] = useState([]);
@@ -109,6 +109,7 @@ function App() {
   return (
     <div className='App'>
       <Header id='h' title='Morse Decoder Encoder' />
+      <MorseCode />
       <Select checked={checked} setChecked={setChecked} />
       {!checked ? (
         <MorseToEnglish

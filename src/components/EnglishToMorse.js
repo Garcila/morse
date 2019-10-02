@@ -14,6 +14,11 @@ export default function MorseToEnglish(props) {
         id='englishInput'
         value={typed}
         onChange={e => setTyped(e.target.value)}
+        onKeyDown={key => {
+          if (key.keyCode === 13) {
+            handleClicked();
+          }
+        }}
       />
       <span>
         <button id='decode' onClick={handleClicked}>

@@ -15,6 +15,23 @@
   width: 90%;
   height: 100vh;
 }
+
+.morseCodeList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 1rem;
+  background-color: #f3f0f0;
+  border-radius: 5px;
+  justify-content: space-between;
+}
+.morseCodeListItem {
+  font-size: 0.7rem;
+  margin: 0.3rem;
+  padding: 0.3rem;
+  background-color: rgb(101, 175, 224);
+  border-radius: 6px;
+}
 #header {
   text-transform: uppercase;
   text-align: center;
