@@ -13,7 +13,7 @@ export default function Select(props) {
           onChange={switchChange}
           checked={props.checked}
           onColor='#86d3ff'
-          offColor='#86de66'
+          offColor='#86d3ff'
           onHandleColor='#2693e6'
           handleDiameter={20}
           uncheckedIcon={false}

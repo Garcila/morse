@@ -8,12 +8,46 @@
   flex-direction: column;
   align-items: center;
   width: 100vw;
+  background-color: #1a1313;
+  color: white;
 }
 .App {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 90%;
   height: 100vh;
+}
+
+.header {
+  min-width: 100vw;
+  min-height: 20vh;
+  background-size: contain;
+  background-image: url('https://res.cloudinary.com/garcila/image/upload/e_sepia:80/v1570033650/1024px-Bletchley_Park_Bombe14.jpg');
+  filter: brightness(0.6) blur(1px);
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.titleInside {
+  position: absolute;
+  padding: 2rem;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.header > p {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+#title {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.5rem 2rem;
 }
 
 .morseCodeList {
@@ -29,14 +63,24 @@
   font-size: 0.7rem;
   margin: 0.3rem;
   padding: 0.3rem;
-  background-color: rgb(101, 175, 224);
+  background-color: #65afe0;
   border-radius: 6px;
 }
-#header {
-  text-transform: uppercase;
+
+.instructions {
   text-align: center;
-  padding: 2rem;
-  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 2rem 0.3rem 2rem;
+  justify-content: center;
+}
+
+.instructions > span {
+  background-color: #6bbdf3;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 0 0.5rem;
+  padding: 0 0.4rem;
 }
 
 .morseToEnglish {
@@ -56,6 +100,13 @@
   margin: 0 2rem;
 }
 
+.englishToMorseInput {
+  display: flex;
+  align-self: center;
+  min-width: 80vw;
+  padding: 0.5rem;
+}
+
 .englishToMorseRomanSpan {
   margin-right: 1rem;
 }
@@ -64,13 +115,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aquamarine;
+  background-color: #65afe0;
   min-height: 10vh;
   border-radius: 0.5rem;
 }
 
-#decode {
-  margin: 2rem 0;
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons > button {
+  flex: 1;
+  padding: 0.5rem;
+  margin: 1rem;
+  background-color: coral;
+  border: none;
+}
+
+.buttons > button:last-child {
+  background-color: #65afe0;
+}
+
+.buttons > button:hover {
+  background-color: #65afe0;
+}
+
+.buttons > button:last-child:hover {
+  background-color: coral;
 }
 
 #roman {

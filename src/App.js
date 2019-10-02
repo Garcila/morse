@@ -17,48 +17,11 @@ function App() {
 
   const [checked, setChecked] = useState(false);
   const allowedCharacters = ['b', 'l', ' ', 'd'];
-  const allowedEnglish = [
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'k',
-    'l',
-    'm',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's',
-    't',
-    'u',
-    'v',
-    'w',
-    'x',
-    'y',
-    'z',
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    0,
-  ];
 
   const typeCode = e => {
     let signal;
+    console.log(e.key);
+    e.key === 'Enter' && decode(messageArr);
     if (allowedCharacters.includes(e.key)) {
       setMessageArr([...messageArr, e.key]);
       if (e.key === 'd') {
@@ -83,9 +46,8 @@ function App() {
   const encodeEnglish = typed => {
     setDecoded('');
     typed.map(i => {
-      // setMessageString(`${messageString}${i}`);
       i = engToMorseCode[i] || '👻';
-      setDecoded(decoded => `${decoded}${i} | `);
+      return setDecoded(decoded => `${decoded}${i} | `);
     });
   };
 
@@ -94,13 +56,12 @@ function App() {
     let sentence = messageArr.join('').split(' ');
     sentence.map(i => {
       i = code[i] || '👻';
-      setDecoded(decoded => decoded + i);
+      return setDecoded(decoded => decoded + i);
     });
     setMessageArr([]);
   };
 
   const clearQuery = (typed, setTyped) => {
-    setTyped('');
     setMessageArr([]);
     setDecoded('');
     setMessageString('');
@@ -108,7 +69,8 @@ function App() {
 
   return (
     <div className='App'>
-      <Header id='h' title='Morse Decoder Encoder' />
+  
+      <Header title='Morser' subtitle='encode and decode morse code' />
       <MorseCode />
       <Select checked={checked} setChecked={setChecked} />
       {!checked ? (

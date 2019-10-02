@@ -10,6 +10,8 @@ export default function MorseToEnglish(props) {
   return (
     <div>
       <input
+        className='englishToMorseInput'
+        placeholder='Type text to be encoded'
         type='text'
         id='englishInput'
         value={typed}
@@ -20,11 +22,11 @@ export default function MorseToEnglish(props) {
           }
         }}
       />
-      <span>
+      <span className='buttons'>
         <button id='decode' onClick={handleClicked}>
           decode
         </button>
-        <button id='clearQuery' onClick={() => clearQuery(typed, setTyped)}>
+        <button id='clearQuery' onClick={() => clearQuery(typed, setTyped(''))}>
           Clear
         </button>
       </span>
