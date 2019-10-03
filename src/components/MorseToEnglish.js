@@ -17,7 +17,7 @@ export default function MorseToEnglish(props) {
   return (
     <div>
       <div className='instructions'>
-        Type <span>d</span> to represent <span>a</span> dot ('.'),
+        Type <span>d</span> to represent a dot ('.'),
         <span>l</span> to represent a line ('_'), <span>|</span> to start a new
         letter, and <span>b</span> to erase a character
       </div>
