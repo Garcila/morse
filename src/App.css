@@ -23,7 +23,7 @@
   min-width: 100vw;
   min-height: 20vh;
   background-size: contain;
-  background-image: url('https://res.cloudinary.com/garcila/image/upload/e_sepia:80/v1570033650/1024px-Bletchley_Park_Bombe14.jpg');
+  background-image: url('https://res.cloudinary.com/garcila/image/upload/v1570033650/morse/1024px-Bletchley_Park_Bombe14.jpg');
   filter: brightness(0.6) blur(1px);
   position: relative;
   margin-bottom: 3rem;
