@@ -18,7 +18,7 @@ export default function MorseToEnglish(props) {
     <div>
       <div className='instructions'>
         Type <span>d</span> to represent a dot ('.'),
-        <span>l</span> to represent a line ('_'), <span>|</span> to start a new
+        <span>l</span> to represent a line ('_'), <span>('space')</span> to start a new
         letter, and <span>b</span> to erase a character
       </div>
       <div id='morse' tabIndex='1' ref={morseArea} onKeyPress={typeCode}>
